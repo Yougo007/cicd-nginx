@@ -6,8 +6,8 @@ metadata:
 description: Nginx Deployment Pipeline 
 serialPipeline:
   stages:
-  - targetId: prod-us
-  - targetId: prod-eu
+  - targetId: prod
+    profiles: []
 
 ---
 apiVersion: deploy.cloud.google.com/v1beta1
