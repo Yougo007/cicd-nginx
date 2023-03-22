@@ -6,23 +6,23 @@ metadata:
 description: Nginx Deployment Pipeline 
 serialPipeline:
   stages:
-  - targetId: us-prod
-  - targetId: eu-prod
+  - targetId: prod-us
+  - targetId: prod-eu
 
 ---
 apiVersion: deploy.cloud.google.com/v1beta1
 kind: Target
 metadata:
-  name: regional-prod
+  name: prod
 description: Production Environment
 multiTarget:
-  targetIds: [us-prod, eu-prod]
+  targetIds: [prod-us, prod-eu]
 
 ---
 apiVersion: deploy.cloud.google.com/v1beta1
 kind: Target
 metadata:
-  name: regional-prod1
+  name: prod-us
 description: US Production Environment
 gke:
   cluster: projects/yougo-k8-hardway-256417/locations/us-central1-c/clusters/us-prod
@@ -31,7 +31,7 @@ gke:
 apiVersion: deploy.cloud.google.com/v1beta1
 kind: Target
 metadata:
-  name: regional-prod2
+  name: prod-eu
 description: EU Environment
 requireApproval: true
 gke:
