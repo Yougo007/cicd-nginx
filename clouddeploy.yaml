@@ -22,7 +22,7 @@ multiTarget:
 apiVersion: deploy.cloud.google.com/v1beta1
 kind: Target
 metadata:
-  name: us-prod
+  name: regional-prod1
 description: US Production Environment
 gke:
   cluster: projects/yougo-k8-hardway-256417/locations/us-central1-c/clusters/us-prod
@@ -31,7 +31,7 @@ gke:
 apiVersion: deploy.cloud.google.com/v1beta1
 kind: Target
 metadata:
-  name: eu-prod
+  name: regional-prod2
 description: EU Environment
 requireApproval: true
 gke:
