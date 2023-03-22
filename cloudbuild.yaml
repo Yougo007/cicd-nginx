@@ -42,4 +42,4 @@ steps:
     --delivery-pipeline=nginx-multi-target-pipeline
     --region=us-central1
     --images=userservice=gcr.io/yougo-k8-hardway-256417/nginx:1.1.2
-    --to-target=regional-prod 
+    --to-target=prod 
