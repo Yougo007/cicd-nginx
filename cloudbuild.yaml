@@ -39,7 +39,7 @@ steps:
   - '-c'
   - >
     gcloud deploy releases create release-$BUILD_ID
-    --delivery-pipeline=nginx-multi-target-pipeline
+    --delivery-pipeline=nginx-multi-prod
     --region=us-central1
-    --images=userservice=gcr.io/yougo-k8-hardway-256417/nginx:1.1.2
+    --images=nginx-multi-prod=gcr.io/yougo-k8-hardway-256417/nginx:1.1.2
     --to-target=prod 
